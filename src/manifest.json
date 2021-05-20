@@ -1,0 +1,38 @@
+{
+  "manifest_version": 2,
+  "name": "__MSG_extName__",
+  "homepage_url": "http://localhost:8080/",
+  "description": "A Vue Browser Extension",
+  "default_locale": "en",
+  "permissions": [
+    "webRequest",
+    "https://api.nnn.ed.nico/v2/material/courses/*/chapters/*",
+    "https://www.nnn.ed.nico/courses/*/chapters/*"
+  ],
+  "icons": {
+    "16": "icons/16.png",
+    "48": "icons/48.png",
+    "128": "icons/128.png"
+  },
+  "background": {
+    "scripts": [
+      "js/background.js"
+    ]
+  },
+  "browser_action": {
+    "default_popup": "popup.html",
+    "default_title": "__MSG_extName__",
+    "default_icon": {
+      "19": "icons/19.png",
+      "38": "icons/38.png"
+    }
+  },
+  "content_scripts": [
+    {
+      "run_at": "document_start",
+      "matches": [ "https://www.nnn.ed.nico/courses/*/chapters/*" ],
+      "js": [ "js/content-script.js" ]
+    }
+  ],
+  "web_accessible_resources" : ["/js/page-script.js"]
+}
