@@ -1,11 +1,12 @@
 import LearningSituation from './database';
 import parseURL from './util/parseNYobikoURL';
 
-const db = new LearningSituation();
+window.db = new LearningSituation();
+const db = window.db;
 let updateCooltime = false;
 
 chrome.runtime.onMessage.addListener(async (event = {}) => {
-	//連続で飛んでくることがあるのでクールタイム
+	//連続で飛んでくることがあるのでクールタイムをはさむ
 	if (updateCooltime) return;
 	updateCooltime = true;
 	setTimeout(() => updateCooltime = false, 500);
