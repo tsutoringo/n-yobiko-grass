@@ -14,7 +14,7 @@
 				<grass
 					v-for="(day, i) in days"
 					:key="i"
-					:level="day ? Math.ceil(day.length / max) * 4 : 0"
+					:level="day ? Math.ceil(day.length / max * 4) : 0"
 					:title="`${day ? day.length : 0}進捗`"
 				/>
 			</template>
@@ -57,7 +57,7 @@ export default {
 
 			events[diff].push(event);
 		}).finally(() => {
-			this.max = Object.values(events).sort((a, b) => a.length - b.length)[0]?.length || 1;
+			this.max = Object.values(events).sort((a, b) => b.length - a.length)[0]?.length || 1;
 
 			for (const diff in events) {
 				const event = events[diff];
