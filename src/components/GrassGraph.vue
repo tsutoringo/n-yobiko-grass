@@ -23,7 +23,7 @@
 </template>
 <script>
 import Grass from './Grass.vue';
-import moment, { max } from 'moment';
+import moment from 'moment';
 
 export default {
 	name: 'GrassGraph',
