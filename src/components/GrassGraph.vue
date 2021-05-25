@@ -19,6 +19,9 @@
 				/>
 			</template>
 		</div>
+		<footer>
+			<span class="colors">Less <grass :level="0"/><grass :level="1"/><grass :level="2"/><grass :level="3"/><grass :level="4"/> More</span>
+		</footer>
 	</div>
 </template>
 <script>
@@ -75,19 +78,12 @@ export default {
 </script>
 <style scoped>
 .grass-graph {
-	display: flex;
-}
-
-.grass-field {
-	display: flex;
-	height: calc(14px * 7);
-	width: calc(14px * 53);
-	flex-direction: column;
-	flex-wrap: wrap;
-	align-items: flex-start;
+	display: grid;
 }
 
 .day-of-week {
+	grid-row: 1 / 2;
+	grid-column: 1 / 2;
 	color: #666666;
 	font-size: 0.5rem;
 	padding: 0 3px;
@@ -96,4 +92,34 @@ export default {
 .day-of-week>* {
 	height: 14px;
 }
+
+.grass-field {
+	grid-row: 1 / 2;
+	grid-column: 2 / 3;
+	display: flex;
+	height: calc(14px * 7);
+	width: calc(14px * 53);
+	flex-direction: column;
+	flex-wrap: wrap;
+	align-items: flex-start;
+}
+
+footer {
+	grid-row: 2 / 3;
+	grid-column: 1 / 3;
+	display: flex;
+}
+
+footer .colors {
+	margin-left: auto;
+	display: flex;
+	align-items: center;
+	padding: 5px;
+}
+
+footer .colors > .grass {
+	margin: 0 2px;
+	margin-top: 2.5px;
+}
+
 </style>
