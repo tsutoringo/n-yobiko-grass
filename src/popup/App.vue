@@ -1,5 +1,5 @@
 <template>
-	<div id="app">
+	<div id="app" class="theme-white">
 		<grass-graph />
 	</div>
 </template>
@@ -25,9 +25,12 @@ export default {
 
 <!-- Tooltip style -->
 <style src="./tooltip.css"></style>
+<style src="./theme.css"></style>
 <style>
 body {
 	margin: 10px;
+	background-color: var(--main-background-color);
+	color: var(--color-text-primary);
 }
 html {
 	width: auto;

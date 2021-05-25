@@ -1,0 +1,18 @@
+.theme-white {
+	--main-background-color: #fff;
+	--main-bg-color: var(--main-background-color);
+	--color-bg-canvas: var(--main-background-color);
+	--color-border-primary: #e1e4e8;
+	--color-border-secondary: #eaecef;
+	--color-timeline-badge-bg: #e1e4e8;
+	--color-text-link: #0366d6;
+	--color-icon-secondary: #586069;
+	--color-text-primary: #24292e;
+	--color-text-secondary: #586069;
+
+	--grass-level-0: #ebedf0;
+	--grass-level-1: #9be9a8;
+	--grass-level-2: #40c463;
+	--grass-level-3: #30a14e;
+	--grass-level-4: #216e39;
+}
