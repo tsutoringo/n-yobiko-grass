@@ -22,7 +22,7 @@ export default {
 	margin: 2px;
 	
 	border: 1px solid #1b1f230f;
-	display: block;
+	display: inline-block;
 	border-radius: 1px;
 }
 
