@@ -15,7 +15,7 @@
 					v-for="(day, i) in days"
 					:key="i"
 					:level="day ? Math.ceil(day.length / max * 4) : 0"
-					v-tooltip="`${day ? day.length : 0}進捗 | ${moment(startDay).add(i-1, 'day').format('MMM DD, YYYY')}`"
+					v-tooltip="`${day ? day.length : 0}進捗 | ${getDateByIndex(i)}`"
 				/>
 			</template>
 		</div>
@@ -39,6 +39,9 @@ export default {
 		max: 0
 	}),
 	methods: {
+		getDateByIndex (i) {
+			return moment(this.startDay).add(i-1, 'day').format('MMM DD, YYYY');
+		}
 	},
 	computed: {
 		moment () {
