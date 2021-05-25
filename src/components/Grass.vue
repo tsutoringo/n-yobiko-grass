@@ -22,22 +22,22 @@ export default {
 	margin: 2px;
 	
 	border: 1px solid #1b1f230f;
-	display: block;
+	display: inline-block;
 	border-radius: 1px;
 }
 
 .grass.level-0 {
-	background-color: #ebedf0;}
+	background-color: var(--grass-level-0);}
 
 .grass.level-1 {
-	background-color: #9be9a8;}
+	background-color: var(--grass-level-1);}
 
 .grass.level-2 {
-	background-color: #40c463;}
+	background-color: var(--grass-level-2);}
 
 .grass.level-3 {
-	background-color: #30a14e;}
+	background-color: var(--grass-level-3);}
 
 .grass.level-4 {
-	background-color: #216e39;}
+	background-color: var(--grass-level-4);}
 </style>

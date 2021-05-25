@@ -55,6 +55,15 @@ class LearningSituation extends Dexie {
 			courseId
 		})));
 	}
+
+	/**
+	 * returns events between startDay and endDay
+	 * @param {Date} startDay
+	 * @param {Date} endDay
+	 */
+	getEvents (startDay, endDay) {
+		return this.events.where('date').between(startDay, endDay)
+	}
 }
 
 export default LearningSituation;
