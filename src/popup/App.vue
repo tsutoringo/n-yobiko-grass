@@ -23,6 +23,8 @@ export default {
 }
 </script>
 
+<!-- Tooltip style -->
+<style src="./tooltip.css"></style>
 <style>
 body {
 	margin: 10px;
