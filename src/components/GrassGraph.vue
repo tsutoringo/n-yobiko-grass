@@ -15,7 +15,7 @@
 					v-for="(day, i) in days"
 					:key="i"
 					:level="day ? Math.ceil(day.length / max * 4) : 0"
-					:title="`${day ? day.length : 0}進捗`"
+					v-tooltip="`${day ? day.length : 0}進捗 | ${moment(start).add(i-1, 'day').format('MMM DD, YYYY')}`"
 				/>
 			</template>
 		</div>
@@ -36,21 +36,25 @@ export default {
 		max: 0
 	}),
 	methods: {
-
+	},
+	computed: {
+		moment () {
+			return moment;
+		}
 	},
 	created () {
-		const endDay = new Date();
+		this.endDay = new Date();
 
 		// 7日間 * 52 + 日曜日から立ってる日数+1
-		this.dayCount = (7 * 52) + (endDay.getDay() + 1);
+		this.dayCount = (7 * 52) + (this.endDay.getDay() + 1);
 		this.days.push(...new Array(this.dayCount));
 
-		const startDay = moment(endDay).subtract(this.dayCount - 1, 'day').startOf('day').toDate();
+		this.startDay = moment(this.endDay).subtract(this.dayCount - 1, 'day').startOf('day').toDate();
 		let events = {};
 
-		this.$db.events.where('date').between(startDay, endDay).each(event => {
+		this.$db.getEvents(this.startDay, this.endDay).each(event => {
 			const diff = moment(
-				moment(endDay).endOf('day')
+				moment(this.endDay).endOf('day')
 			).diff(event.date, 'day');
 
 			if (!events[diff]) events[diff] = []; 
