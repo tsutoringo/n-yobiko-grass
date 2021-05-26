@@ -1,17 +1,13 @@
 <template>
 	<div id="app" class="theme-white">
-		<grass-graph />
-		<learning-timeline />
+		<router-view></router-view>
 	</div>
 </template>
 
 <script>
-import GrassGraph from '../components/GrassGraph';
-import learningTimeline from '../components/LearningTimeline';
-
 export default {
 	name: 'App',
-	components: { GrassGraph, learningTimeline }
+	components: { }
 }
 </script>
 
