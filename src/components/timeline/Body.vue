@@ -7,7 +7,7 @@
 				<span class="icon open"><octicon :icon="fold" /></span>
 			</summary>
 			<div>
-				<slot name="content" />
+				<slot />
 			</div>
 		</details>
 	</div>
