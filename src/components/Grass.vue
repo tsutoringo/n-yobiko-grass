@@ -25,19 +25,4 @@ export default {
 	display: inline-block;
 	border-radius: 1px;
 }
-
-.grass.level-0 {
-	background-color: var(--grass-level-0);}
-
-.grass.level-1 {
-	background-color: var(--grass-level-1);}
-
-.grass.level-2 {
-	background-color: var(--grass-level-2);}
-
-.grass.level-3 {
-	background-color: var(--grass-level-3);}
-
-.grass.level-4 {
-	background-color: var(--grass-level-4);}
 </style>

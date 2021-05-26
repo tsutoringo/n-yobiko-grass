@@ -5,8 +5,8 @@
 			<template #title>
 				<slot name="title"/>
 			</template>
-			<template #content>
-				<slot name="content"></slot>
+			<template #default>
+				<slot />
 			</template>
 		</timeline-body>
 	</div>
@@ -27,7 +27,6 @@ export default {
 	display: flex;
 	margin-left: 16px;
 	padding: 16px 0;
-	font-size: 16px;
 }
 
 .timeline-item::before {

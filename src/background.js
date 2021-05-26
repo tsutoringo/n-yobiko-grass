@@ -1,8 +1,8 @@
 import LearningSituation from './database';
 import parseURL from './util/parseNYobikoURL';
 
-window.db = new LearningSituation();
-const db = window.db;
+const db = new LearningSituation();
+window.db = db;
 let updateCooltime = false;
 
 chrome.runtime.onMessage.addListener(async (event = {}) => {
@@ -36,7 +36,7 @@ chrome.runtime.onMessage.addListener(async (event = {}) => {
 
 					// 新しく教材が終わっていたらイベント登録
 					if (newSec.passed && !oldSec.passed) {
-						await db.addEvent('ended', newSec.resource_type, newSec.id);
+						await db.addEvent('ended', 'section', newSec.id);
 					}
 				}
 

@@ -1,50 +1,37 @@
 <template>
 	<div id="app" class="theme-white">
 		<grass-graph />
-		<timeline>
-			<template #title>
-				May <span>2021</span>
-			</template>
-			<template #default>
-				<timeline-item>
-					<template #badge>a</template>
-					<template #title>終わらせた動画</template>
-					<template #content>にゃーんにゃーん</template>
-				</timeline-item>
-				<timeline-item>
-					<template #badge>a</template>
-					<template #title>はじめた動画</template>
-				</timeline-item>
-				<timeline-item>
-					<template #badge></template>
-					<template #title>終わらせたテスト</template>
-				</timeline-item>
-			</template>
-		</timeline>
+		<learning-timeline />
 	</div>
 </template>
 
 <script>
 import GrassGraph from '../components/GrassGraph';
-import Timeline from '../components/timeline/Timeline';
-import TimelineItem from '../components/timeline/Item';
+import learningTimeline from '../components/LearningTimeline';
 
 export default {
 	name: 'App',
-	components: { GrassGraph, Timeline, TimelineItem }
+	components: { GrassGraph, learningTimeline }
 }
 </script>
 
 <!-- Tooltip style -->
 <style src="./tooltip.css"></style>
 <style src="./theme.css"></style>
+<style src="./shortcuts.css"></style>
 <style>
 body {
 	margin: 10px;
 	background-color: var(--main-background-color);
 	color: var(--color-text-primary);
+	font-size: 14px;
 }
 html {
 	width: auto;
+}
+
+a {
+	color: var(--color-text-link);
+	text-decoration: none;
 }
 </style>

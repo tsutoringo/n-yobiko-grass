@@ -7,7 +7,7 @@
 				<span class="icon open"><octicon :icon="fold" /></span>
 			</summary>
 			<div>
-				<slot name="content" />
+				<slot />
 			</div>
 		</details>
 	</div>
@@ -36,6 +36,7 @@ export default {
 }
 .timeline-body>details>summary>.title {
 	margin-right: auto;
+	font-size: 16px;
 }
 .timeline-body>details>summary:hover>.title {
 	color: var(--color-text-link);
@@ -51,5 +52,30 @@ export default {
 
 .timeline-body>details[open]>summary>.icon.close {
 	display: none;
+}
+
+.timeline-body>details>div>ul {
+	list-style: none;
+	margin-top: 4px;
+	margin-bottom: 0;
+	padding: 0;
+}
+
+.timeline-body>details>div>ul>li {
+	padding: 4px 0;
+	display: flex;
+	align-items: center;
+}
+
+.timeline-body>details>div>ul>li>.progress {
+	flex: 3
+}
+
+.timeline-body>details>div>ul>li>div {
+	flex: 8
+}
+
+.timeline-body>details>div>ul>li>div>a.sub-link {
+	margin-left: 4px;
 }
 </style>
