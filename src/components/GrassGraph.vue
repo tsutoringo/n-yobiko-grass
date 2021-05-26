@@ -59,9 +59,9 @@ export default {
 		let events = {};
 
 		this.$db.getEvents(this.startDay, this.endDay).each(event => {
-			const diff = moment(
-				moment(this.endDay).endOf('day')
-			).diff(event.date, 'day');
+			const diff = moment(this.endDay)
+				.endOf('day')
+				.diff(event.date, 'day');
 
 			if (!events[diff]) events[diff] = []; 
 
