@@ -1,8 +1,8 @@
 import LearningSituation from './database';
 import parseURL from './util/parseNYobikoURL';
 
-window.db = new LearningSituation();
-const db = window.db;
+const db = new LearningSituation();
+window.db = db;
 let updateCooltime = false;
 
 chrome.runtime.onMessage.addListener(async (event = {}) => {
