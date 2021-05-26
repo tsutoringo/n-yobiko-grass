@@ -30,9 +30,7 @@ import moment from 'moment';
 
 export default {
 	name: 'GrassGraph',
-	components: {
-		Grass
-	},
+	components: { Grass },
 	data: () => ({
 		days: [],
 		dayCount: 0,
