@@ -6,7 +6,7 @@
 		<template #default>
 			<timeline-item v-if="endedChapter">
 				<template #badge><octicon :icon="check"/></template>
-				<template #title>Ended {{endedSectionCount}} sections in {{endedChapter.length}} chapters</template>
+				<template #title>Complete {{endedSectionCount}} sections in {{endedChapter.length}} chapters</template>
 				<template #default>
 					<ul>
 						<li v-for="(chapter, k) in endedChapter" :key="k">
