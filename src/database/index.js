@@ -21,7 +21,7 @@ class LearningSituation extends Dexie {
 	 * @returns {Dexie.Collection}
 	 */
 	getSectionsByChapterId (id) {
-		return this.sections.where('chapterId').equals(id)
+		return this.sections.where('chapterId').equals(id);
 	}
 
 	/**
@@ -62,7 +62,7 @@ class LearningSituation extends Dexie {
 	 * @param {Date} endDay
 	 */
 	getEvents (startDay, endDay) {
-		return this.events.where('date').between(startDay, endDay)
+		return this.events.where('date').between(startDay, endDay);
 	}
 }
 
