@@ -64,6 +64,14 @@ class LearningSituation extends Dexie {
 	getEvents (startDay, endDay) {
 		return this.events.where('date').between(startDay, endDay);
 	}
+
+	getSectionById (id) {
+		return this.sections.where('id').equals(id).first();
+	}
+
+	getChapterById (id) {
+		return this.chapters.where('id').equals(id).first();
+	}
 }
 
 export default LearningSituation;

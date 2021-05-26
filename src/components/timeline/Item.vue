@@ -27,7 +27,6 @@ export default {
 	display: flex;
 	margin-left: 16px;
 	padding: 16px 0;
-	font-size: 16px;
 }
 
 .timeline-item::before {

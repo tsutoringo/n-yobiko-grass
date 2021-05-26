@@ -2,6 +2,7 @@
 	--main-background-color: #fff;
 	--main-bg-color: var(--main-background-color);
 	--color-bg-canvas: var(--main-background-color);
+	--color-bg-primary: #fff;
 	--color-border-primary: #e1e4e8;
 	--color-border-secondary: #eaecef;
 	--color-timeline-badge-bg: #e1e4e8;
