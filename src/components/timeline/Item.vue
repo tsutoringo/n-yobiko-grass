@@ -5,8 +5,8 @@
 			<template #title>
 				<slot name="title"/>
 			</template>
-			<template #content>
-				<slot name="content"></slot>
+			<template #default>
+				<slot />
 			</template>
 		</timeline-body>
 	</div>
