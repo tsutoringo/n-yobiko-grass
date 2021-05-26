@@ -18,13 +18,20 @@ export default {
 <!-- Tooltip style -->
 <style src="./tooltip.css"></style>
 <style src="./theme.css"></style>
+<style src="./shortcuts.css"></style>
 <style>
 body {
 	margin: 10px;
 	background-color: var(--main-background-color);
 	color: var(--color-text-primary);
+	font-size: 14px;
 }
 html {
 	width: auto;
+}
+
+a {
+	color: var(--color-text-link);
+	text-decoration: none;
 }
 </style>
