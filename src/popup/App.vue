@@ -1,5 +1,5 @@
 <template>
-	<div id="app" class="theme-white">
+	<div id="app" class="theme-dark">
 		<router-view></router-view>
 	</div>
 </template>
@@ -7,7 +7,10 @@
 <script>
 export default {
 	name: 'App',
-	components: { }
+	components: { },
+	created () {
+		document.body.classList.add('theme-dark');
+	}
 }
 </script>
 
@@ -17,10 +20,10 @@ export default {
 <style src="./shortcuts.css"></style>
 <style>
 body {
+	font-size: 14px;
 	margin: 10px;
 	background-color: var(--main-background-color);
 	color: var(--color-text-primary);
-	font-size: 14px;
 }
 html {
 	width: auto;
@@ -29,5 +32,9 @@ html {
 a {
 	color: var(--color-text-link);
 	text-decoration: none;
+}
+</style>
+<style scoped>
+#app {
 }
 </style>

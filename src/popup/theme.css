@@ -17,3 +17,25 @@
 	--grass-level-3: #30a14e;
 	--grass-level-4: #216e39;
 }
+
+.theme-dark {
+	--main-background-color: #0d1117;
+	--main-bg-color: var(--main-background-color);
+	--color-bg-canvas: var(--main-background-color);
+	--color-bg-primary: #0d1117;
+	--color-border-primary: #30363d;
+	--color-border-secondary: #21262d;
+	--color-timeline-badge-bg: #0d1117;
+	--color-text-link: #0366d6;
+	--color-icon-secondary: #6e7681;
+	--color-text-primary: #c9d1d9;
+	--color-text-secondary: #8b949e;
+	--color-calendar-graph-day-border: #1b1f230f;
+
+	
+	--grass-level-0: #161b22;
+	--grass-level-1: #0e4429;
+	--grass-level-2: #006d32;
+	--grass-level-3: #26a641;
+	--grass-level-4: #39d353;
+}

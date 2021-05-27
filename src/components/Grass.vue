@@ -21,7 +21,7 @@ export default {
 	box-sizing: border-box;
 	margin: 2px;
 	
-	border: 1px solid #1b1f230f;
+	border: 1px solid var(--color-calendar-graph-day-border);
 	display: inline-block;
 	border-radius: 1px;
 }

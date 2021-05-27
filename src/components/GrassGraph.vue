@@ -80,6 +80,8 @@ export default {
 <style scoped>
 .grass-graph {
 	display: grid;
+	padding-top: 4px;
+	margin: 0 8px;
 }
 
 .day-of-week {
