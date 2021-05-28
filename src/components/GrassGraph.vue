@@ -82,6 +82,7 @@ export default {
 	display: grid;
 	padding-top: 4px;
 	margin: 0 8px;
+	padding-right: 12px;
 }
 
 .day-of-week {
@@ -93,15 +94,15 @@ export default {
 }
 
 .day-of-week>* {
-	height: 14px;
+	height: 13px;
 }
 
 .grass-field {
 	grid-row: 1 / 2;
 	grid-column: 2 / 3;
 	display: flex;
-	height: calc(14px * 7);
-	width: calc(14px * 53);
+	height: calc(13px * 7);
+	width: calc(13px * 53);
 	flex-direction: column;
 	flex-wrap: wrap;
 	align-items: flex-start;

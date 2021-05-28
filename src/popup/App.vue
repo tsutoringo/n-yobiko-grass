@@ -1,5 +1,5 @@
 <template>
-	<div id="app" class="theme-dark">
+	<div id="app">
 		<router-view></router-view>
 	</div>
 </template>
@@ -29,12 +29,12 @@ html {
 	width: auto;
 }
 
+h1, h2, h3, h4, h5, h6 {
+	margin: 0;
+}
+
 a {
 	color: var(--color-text-link);
 	text-decoration: none;
-}
-</style>
-<style scoped>
-#app {
 }
 </style>

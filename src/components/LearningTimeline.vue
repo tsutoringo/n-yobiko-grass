@@ -19,14 +19,6 @@
 					</ul>
 				</template>
 			</timeline-item>
-			<timeline-item>
-				<template #badge>a</template>
-				<template #title>はじめた動画</template>
-			</timeline-item>
-			<timeline-item>
-				<template #badge></template>
-				<template #title>終わらせたテスト</template>
-			</timeline-item>
 		</template>
 	</timeline>
 </template>
