@@ -65,7 +65,6 @@ export default {
 
 			for (const event of events) {
 				const section        = await this.$db.getSectionById(event.targetId);
-				console.log(event, section)
 				const { chapterId }  = section;
 
 				if (!chapters[chapterId]) {
