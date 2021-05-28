@@ -19,9 +19,9 @@ export default {
 	width: 10px;
 	height: 10px;
 	box-sizing: border-box;
-	margin: 2px;
+	margin: 1.5px;
 	
-	border: 1px solid #1b1f230f;
+	border: 1px solid var(--color-calendar-graph-day-border);
 	display: inline-block;
 	border-radius: 1px;
 }

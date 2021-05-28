@@ -6,7 +6,7 @@
 		<template #default>
 			<timeline-item v-if="endedChapter">
 				<template #badge><octicon :icon="check"/></template>
-				<template #title>Ended {{endedSectionCount}} sections in {{endedChapter.length}} chapters</template>
+				<template #title>Complete {{endedSectionCount}} sections in {{endedChapter.length}} chapters</template>
 				<template #default>
 					<ul>
 						<li v-for="(chapter, k) in endedChapter" :key="k">
@@ -18,14 +18,6 @@
 						</li>
 					</ul>
 				</template>
-			</timeline-item>
-			<timeline-item>
-				<template #badge>a</template>
-				<template #title>はじめた動画</template>
-			</timeline-item>
-			<timeline-item>
-				<template #badge></template>
-				<template #title>終わらせたテスト</template>
 			</timeline-item>
 		</template>
 	</timeline>
@@ -65,7 +57,6 @@ export default {
 
 			for (const event of events) {
 				const section        = await this.$db.getSectionById(event.targetId);
-				console.log(event, section)
 				const { chapterId }  = section;
 
 				if (!chapters[chapterId]) {

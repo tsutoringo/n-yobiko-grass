@@ -1,6 +1,6 @@
 <template>
 	<div class="timeline-body">
-		<details>
+		<details open>
 			<summary>
 				<span class="title"><slot name="title" /></span>
 				<span class="icon close"><octicon :icon="unfold" /></span>

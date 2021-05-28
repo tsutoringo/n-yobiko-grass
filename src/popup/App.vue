@@ -1,17 +1,16 @@
 <template>
-	<div id="app" class="theme-white">
-		<grass-graph />
-		<learning-timeline />
+	<div id="app">
+		<router-view></router-view>
 	</div>
 </template>
 
 <script>
-import GrassGraph from '../components/GrassGraph';
-import learningTimeline from '../components/LearningTimeline';
-
 export default {
 	name: 'App',
-	components: { GrassGraph, learningTimeline }
+	components: { },
+	created () {
+		document.body.classList.add('theme-dark');
+	}
 }
 </script>
 
@@ -21,13 +20,17 @@ export default {
 <style src="./shortcuts.css"></style>
 <style>
 body {
+	font-size: 14px;
 	margin: 10px;
 	background-color: var(--main-background-color);
 	color: var(--color-text-primary);
-	font-size: 14px;
 }
 html {
 	width: auto;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	margin: 0;
 }
 
 a {

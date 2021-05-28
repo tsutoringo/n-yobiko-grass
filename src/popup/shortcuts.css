@@ -17,6 +17,14 @@
 	font-size: 12px;
 }
 
+.f4 {
+	font-size: 16px;
+}
+
+.text-normal {
+	font-weight: 400;
+}
+
 .link--muted {
 	color: var(--color-text-secondary);
 }
