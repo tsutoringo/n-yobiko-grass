@@ -38,7 +38,7 @@ export default {
 	}),
 	methods: {
 		getDateByIndex (i) {
-			return moment(this.startDay).add(i-1, 'day').format('MMM DD, YYYY');
+			return moment(this.startDay).add(i, 'day').format('MMM DD, YYYY');
 		}
 	},
 	computed: {
