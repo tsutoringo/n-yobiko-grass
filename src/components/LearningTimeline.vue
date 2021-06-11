@@ -14,7 +14,7 @@
 								<a :href="`https://www.nnn.ed.nico/courses/${chapter.courseId}/chapters/${chapter.id}`" target="_blank">{{chapter.title}}</a>
 								<a href="#" class="f6 link--muted sub-link">{{chapter.sections}} sections</a>
 							</div>
-							<Progress :max="maxEndedSectionCount" :val="chapter.sections" />
+							<Progress :max="endedSectionCount" :val="chapter.sections" />
 						</li>
 					</ul>
 				</template>
@@ -74,9 +74,6 @@ export default {
 		}
 	},
 	computed: {
-		maxEndedSectionCount () {
-			return this.endedChapter[0]?.sections || 1;
-		},
 		tomonth () {
 			return moment(this.targetMonth).format('MMM')
 		},
